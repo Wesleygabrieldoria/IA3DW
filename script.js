@@ -5,16 +5,16 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [
     {
-        enunciado: "A IA te ajuda no seu dia a dia?",
+        enunciado: "Você gosta da ideia de Inteligência Artificial?",
         alternativas:["Sim","Não"]
     },
     {
-        enunciado: "Você tem medo da IA?",
-        alternativas:["Sim","Não"]
+        enunciado: "Pergunta 2",
+        alternativas:["Alternativa 1","Alternativa 2"]
     },
     {
-        enunciado: "Você acredita que a IA seja uma ferramenta de trabalho?",
-        alternativas:["Sim","Não"]
+        enunciado: "Pergunta 3",
+        alternativas:["Alternativa 1","Alternativa 2"]
     }
 ]
 
@@ -27,9 +27,9 @@ function mostraPergunta(){
     mostraAlternativas();
 }
 function mostraAlternativas(){
-for(const alternativa of perguntaAtual.alternativa){
-    const botaoAlternativas = document.createElement("buttonn");
-    botaoAlternativas.textContent = alternativa;
+    for(const alternativa of perguntaAtual.alternativa){
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa;
+        caixaAlternativa.appendChild(botaoAlternativas);
+    }
 }
-}
-
